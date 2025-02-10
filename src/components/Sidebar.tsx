@@ -27,7 +27,7 @@ const Sidebar = () => {
     <SidebarRoot>
       <SidebarContent className="bg-white border-r">
         <div className="p-4">
-          <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">
+          <h1 className="text-2xl font-bold bg-clip-text text-primary">
             VigilAir
           </h1>
         </div>

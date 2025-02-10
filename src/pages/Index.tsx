@@ -1,5 +1,5 @@
 
-import { Bell, Camera, Eye, EyeOff } from "lucide-react";
+import { Bell, Camera, Power } from "lucide-react";
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
@@ -17,7 +17,7 @@ const AlertCard = ({ level, title, time }: { level: 'low' | 'medium' | 'high', t
         </div>
       </div>
       <Button variant="ghost" size="icon" className="text-gray-500 hover:text-gray-700">
-        <Eye className="w-4 h-4" />
+        <Bell className="w-4 h-4" />
       </Button>
     </div>
   </div>
@@ -42,7 +42,7 @@ const Index = () => {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Tableau de bord</h1>
-            <p className="text-gray-500">Aperçu de votre système de sécurité</p>
+            <p className="text-gray-600">Aperçu de votre système de sécurité</p>
           </div>
           <Button
             onClick={toggleSystem}
@@ -51,12 +51,12 @@ const Index = () => {
           >
             {isActivated ? (
               <>
-                <EyeOff className="w-4 h-4 mr-2" />
+                <Power className="w-4 h-4 mr-2" />
                 Désactiver
               </>
             ) : (
               <>
-                <Eye className="w-4 h-4 mr-2" />
+                <Power className="w-4 h-4 mr-2" />
                 Activer
               </>
             )}
