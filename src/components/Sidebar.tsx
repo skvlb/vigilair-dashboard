@@ -25,12 +25,14 @@ const Sidebar = () => {
 
   return (
     <SidebarRoot>
-      <SidebarContent>
+      <SidebarContent className="bg-white border-r">
         <div className="p-4">
-          <h1 className="text-2xl font-bold text-white">VigilAir</h1>
+          <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">
+            VigilAir
+          </h1>
         </div>
         <SidebarGroup>
-          <SidebarGroupLabel>Navigation</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-gray-500">Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => (
@@ -39,7 +41,7 @@ const Sidebar = () => {
                     asChild
                     className={`sidebar-link ${
                       location.pathname === item.path
-                        ? "bg-white/20"
+                        ? "active"
                         : ""
                     }`}
                   >
