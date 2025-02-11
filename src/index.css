@@ -62,18 +62,19 @@
 
 @layer components {
   .glass-card {
-    @apply bg-background/80 backdrop-blur-sm border border-border shadow-lg;
+    @apply bg-background/80 backdrop-blur-sm border border-border shadow-lg dark:bg-background/20;
   }
   
   .sidebar-link {
-    @apply flex items-center gap-3 px-4 py-2 text-sm text-muted-foreground rounded-lg hover:bg-primary/5 transition-colors;
+    @apply flex items-center gap-3 px-4 py-2 text-sm text-muted-foreground rounded-lg hover:bg-primary/5 transition-colors dark:hover:bg-primary/10;
   }
   
   .sidebar-link.active {
-    @apply bg-primary/10 text-primary font-medium;
+    @apply bg-primary/10 text-primary font-medium dark:bg-primary/20;
   }
   
   .alert-card {
-    @apply bg-card shadow-md rounded-lg p-4 transition-all duration-300 hover:shadow-lg border;
+    @apply bg-card shadow-md rounded-lg p-4 transition-all duration-300 hover:shadow-lg border dark:bg-card/40;
   }
 }
+
