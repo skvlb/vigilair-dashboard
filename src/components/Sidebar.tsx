@@ -1,5 +1,5 @@
 
-import { Bell, Camera, History, Home, Settings } from "lucide-react";
+import { Bell, Camera, History, Home, Moon, Settings, Sun } from "lucide-react";
 import { 
   Sidebar as SidebarRoot,
   SidebarContent,
@@ -11,6 +11,8 @@ import {
   SidebarMenuButton,
 } from "@/components/ui/sidebar";
 import { Link, useLocation } from "react-router-dom";
+import { useTheme } from "next-themes";
+import { Button } from "./ui/button";
 
 const menuItems = [
   { title: "Tableau de bord", icon: Home, path: "/" },
@@ -22,17 +24,29 @@ const menuItems = [
 
 const Sidebar = () => {
   const location = useLocation();
+  const { theme, setTheme } = useTheme();
 
   return (
     <SidebarRoot>
-      <SidebarContent className="bg-white border-r">
+      <SidebarContent className="bg-background border-r border-border">
         <div className="p-4">
-          <h1 className="text-2xl font-bold bg-clip-text text-primary">
-            VigilAir
-          </h1>
+          <div className="flex items-center justify-between">
+            <h1 className="text-2xl font-bold text-primary">
+              VigilAir
+            </h1>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            >
+              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <span className="sr-only">Basculer le thème</span>
+            </Button>
+          </div>
         </div>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-gray-500">Navigation</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-muted-foreground">Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => (

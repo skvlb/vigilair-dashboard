@@ -26,6 +26,28 @@
     --ring: 221 83% 23%;
     --radius: 0.75rem;
   }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
 }
  
 @layer base {
@@ -40,11 +62,11 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg;
+    @apply bg-background/80 backdrop-blur-sm border border-border shadow-lg;
   }
   
   .sidebar-link {
-    @apply flex items-center gap-3 px-4 py-2 text-sm text-gray-600 rounded-lg hover:bg-primary/5 transition-colors;
+    @apply flex items-center gap-3 px-4 py-2 text-sm text-muted-foreground rounded-lg hover:bg-primary/5 transition-colors;
   }
   
   .sidebar-link.active {
@@ -52,7 +74,6 @@
   }
   
   .alert-card {
-    @apply bg-white shadow-md rounded-lg p-4 transition-all duration-300 hover:shadow-lg border border-gray-100;
+    @apply bg-card shadow-md rounded-lg p-4 transition-all duration-300 hover:shadow-lg border;
   }
 }
-
