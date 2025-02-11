@@ -55,7 +55,7 @@ export default {
         },
         alert: {
           low: "#2dd4bf",
-          medium: "#fbbf24",
+          medium: "#fbbf24", 
           high: "#ef4444",
         }
       },
