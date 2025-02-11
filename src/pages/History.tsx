@@ -27,7 +27,6 @@ const History = () => {
       camera: "Caméra garage",
       severity: "high",
     },
-    // Ajout d'événements supplémentaires pour démonstration
     {
       id: 4,
       date: "2024-02-20 10:30",
@@ -49,15 +48,15 @@ const History = () => {
       <div className="animate-fade-in space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <HistoryIcon className="h-8 w-8 text-white" />
-            <h1 className="text-2xl font-bold text-white">Historique</h1>
+            <HistoryIcon className="h-8 w-8 text-gray-900" />
+            <h1 className="text-2xl font-bold text-gray-900">Historique</h1>
           </div>
           <div className="flex items-center gap-4">
-            <button className="glass-card flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors">
+            <button className="glass-card flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors text-gray-900">
               <Calendar className="h-5 w-5" />
               <span>Filtrer</span>
             </button>
-            <button className="glass-card flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors">
+            <button className="glass-card flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors text-gray-900">
               <Download className="h-5 w-5" />
               <span>Exporter</span>
             </button>
@@ -66,8 +65,8 @@ const History = () => {
 
         <Card className="glass-card">
           <CardHeader>
-            <CardTitle className="text-white">Événements récents</CardTitle>
-            <CardDescription className="text-gray-400">
+            <CardTitle className="text-gray-900">Événements récents</CardTitle>
+            <CardDescription className="text-gray-600">
               Historique des dernières détections et alertes
             </CardDescription>
           </CardHeader>
@@ -87,10 +86,10 @@ const History = () => {
                   >
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="text-white font-medium">{event.type}</h3>
-                        <p className="text-gray-400 text-sm">{event.camera}</p>
+                        <h3 className="text-gray-900 font-medium">{event.type}</h3>
+                        <p className="text-gray-600 text-sm">{event.camera}</p>
                       </div>
-                      <p className="text-gray-400 text-sm">{event.date}</p>
+                      <p className="text-gray-600 text-sm">{event.date}</p>
                     </div>
                   </div>
                 ))}
@@ -104,3 +103,4 @@ const History = () => {
 };
 
 export default History;
+

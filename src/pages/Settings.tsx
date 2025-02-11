@@ -40,8 +40,8 @@ const Settings = () => {
     <Layout>
       <div className="animate-fade-in space-y-6">
         <div className="flex items-center gap-2">
-          <SettingsIcon className="h-8 w-8 text-white" />
-          <h1 className="text-2xl font-bold text-white">Paramètres</h1>
+          <SettingsIcon className="h-8 w-8 text-gray-900" />
+          <h1 className="text-2xl font-bold text-gray-900">Paramètres</h1>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -49,17 +49,17 @@ const Settings = () => {
             <Card key={group.title} className="glass-card">
               <CardHeader>
                 <div className="flex items-center gap-2">
-                  <group.icon className="h-5 w-5 text-white" />
-                  <CardTitle className="text-white">{group.title}</CardTitle>
+                  <group.icon className="h-5 w-5 text-gray-900" />
+                  <CardTitle className="text-gray-900">{group.title}</CardTitle>
                 </div>
-                <CardDescription className="text-gray-400">
+                <CardDescription className="text-gray-600">
                   {group.description}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 {group.settings.map((setting) => (
                   <div key={setting.label} className="space-y-2">
-                    <Label className="text-gray-200">{setting.label}</Label>
+                    <Label className="text-gray-900">{setting.label}</Label>
                     <Input placeholder={setting.placeholder} />
                   </div>
                 ))}
@@ -73,3 +73,4 @@ const Settings = () => {
 };
 
 export default Settings;
+
